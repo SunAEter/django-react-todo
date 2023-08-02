@@ -22,14 +22,14 @@ function App() {
       }
       }>
         <Container>
-          <Navbar.Brand href="#">
+          <NavbarBrand href="#">
             ToDo App
-          </Navbar.Brand>
+          </NavbarBrand>
         </Container>
       </Navbar>
       <Container>
         <TodoForm />
-        <TodoList todos={Todos}/>
+        <TodoList todos={todos}/>
       </Container>
     </div>
   );
