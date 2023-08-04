@@ -9,9 +9,9 @@ import axios from "axios";
 function App() {
   const [todos, setTodos] = useState([]);
   useEffect(() => {
-    axios.get("/api/todos/").then((res) => { 
-      setTodos(res.data) 
-    }).catch(()=>{
+    axios.get("/api/todos/").then((res) => {
+      setTodos(res.data)
+    }).catch(() => {
       alert("Something went wrong");
     })
   }, [])
@@ -28,8 +28,8 @@ function App() {
         </Container>
       </Navbar>
       <Container>
-        <TodoForm />
-        <TodoList todos={todos}/>
+        <TodoForm todos={todos} setTodos={setTodos} />
+        <TodoList todos={todos} setTodos={setTodos} />
       </Container>
     </div>
   );

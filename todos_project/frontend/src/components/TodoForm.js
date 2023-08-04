@@ -11,9 +11,10 @@ export default function TodoForm() {
     }
     return <Form>
         <InputGroup className="nb-4">
-            <FormControl placeholder="New Todo" />
+            <FormControl placeholder="New Todo" 
             onChange = {handleChange}
             value = {name}
+            />
             <Button type="submit"> Add </Button>
         </InputGroup>
     </Form>
